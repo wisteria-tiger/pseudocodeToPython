@@ -1,22 +1,6 @@
-#from curses.ascii import isdigit
+
+from curses.ascii import isdigit
 import random
-
-print("hello")
-
-myvariable = 5
-
-def myfunction(x, y):
-    return (x + y)
-
-print(myfunction(myvariable, 10))
-
-mylist = [1,2,3,4,5,"bot"]
-
-print(mylist[0])
-
-for x in mylist:
-    print(x)
-
 #1
 word = input("Enter a string: ")
 print(word.upper())
@@ -28,9 +12,9 @@ num1 = int(input("Enter a number: "))
   #  num1 = input("Enter a number: ")
 
 num2 = int(input("Enter another number: "))
-#while not isdigit:
-   # print("Not a valid number.")
-   # num2 = input("Enter another number: ")
+while not isdigit():
+   print("Not a valid number.")
+   num2 = input("Enter another number: ")
 
 sum = num1 + num2
 print(f"Sum of numbers: ", {sum})
@@ -38,7 +22,8 @@ print(f"Sum of numbers: ", {sum})
 #3
 
 choice = input("Would you like to add numbers together? (y/n): ")
-total = 0
+choice.lower()
+total = 0 
 while choice == "y":
     numToAdd = int(input("Enter number to add: "))
     total = total + numToAdd
