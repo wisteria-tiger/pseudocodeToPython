@@ -6,18 +6,18 @@ word = input("Enter a string: ")
 print(word.upper())
 
 #2
-num1 = int(input("Enter a number: "))
-#while not isdigit:
-  #  print("Not a valid number.")
-  #  num1 = input("Enter a number: ")
-
-num2 = int(input("Enter another number: "))
-while not isdigit():
-   print("Not a valid number.")
-   num2 = input("Enter another number: ")
-
+num1 = input("Enter a number: ")
+while num1 != isdigit:
+    print("Not a valid number.")
+    num1 = input("Enter a number: ")
+int(num1)
+num2 = input("Enter another number: ")
+while num1 != isdigit:
+    print("Not a valid number.")
+    num2 = input("Enter another number: ")
+int(num2)
 sum = num1 + num2
-print(f"Sum of numbers: ", {sum})
+print(f"Sum of numbers: ", sum)
 
 #3
 
@@ -47,10 +47,10 @@ oddCount = 0
 for i in range(10):
     number = random.randint(0, 50)
     if number % 2 == 0:
-        evenCount = evenCount + 1
+        evenCount =+ 1
         print("RIGHT")
     else:
-        oddCount = oddCount + 1
+        oddCount =+ 1
         print("LEFT")
 
 print(f"RIGHT: ", evenCount)
