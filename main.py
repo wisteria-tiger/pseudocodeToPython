@@ -43,7 +43,7 @@ while flag:
         print("Not a valid number.")
         max = input("Enter a number to add: ")
     maximum = int(max)
-    print(random.randint(0, max))
+    print(random.randint(0, maximum))
     choice2 = input("Would you like to play again? (y/n): ")
     choice2.lower()
     if choice2 == "n":
