@@ -7,26 +7,29 @@ print(word.upper())
 
 #2
 num1 = input("Enter a number: ")
-while num1 != isdigit:
+while not num1.isdigit():
     print("Not a valid number.")
     num1 = input("Enter a number: ")
-int(num1)
+number1 = int(num1)
 num2 = input("Enter another number: ")
-while num1 != isdigit:
+while not num2.isdigit():
     print("Not a valid number.")
     num2 = input("Enter another number: ")
-int(num2)
-sum = num1 + num2
+number2 = int(num2)
+sum = number1 + number2
 print(f"Sum of numbers: ", sum)
 
 #3
-
 choice = input("Would you like to add numbers together? (y/n): ")
 choice.lower()
 total = 0 
 while choice == "y":
-    numToAdd = int(input("Enter number to add: "))
-    total = total + numToAdd
+    userInput = input("Enter number to add: ")
+    while not userInput.isdigit():
+        print("Not a valid number.")
+        userInput = input("Enter a number to add: ")
+    numToAdd = int(userInput)
+    total =+ numToAdd
     choice = input("Would you like to add another number? (y/n): ")
 
 print(total)
@@ -35,9 +38,14 @@ print(total)
 flag = True
 while flag:
     random.random()
-    max = int(input("Enter a maximum number for a range of random numbers: "))
+    max = input("Enter a maximum number for a range of random numbers: ")
+    while not max.isdigit():
+        print("Not a valid number.")
+        max = input("Enter a number to add: ")
+    maximum = int(max)
     print(random.randint(0, max))
     choice2 = input("Would you like to play again? (y/n): ")
+    choice2.lower()
     if choice2 == "n":
         flag = False
 
